@@ -38,7 +38,6 @@ form.addEventListener('submit', (event) => {
         taskList.appendChild(taskItem);
         taskInput.value = '';
         taskDescriptionTextarea.value = '';
-
         const descriptionBtn = taskItem.querySelector('#description-btn');
         const descriptionText = taskItem.querySelector('.description p.hidden');
         let isDescriptionVisible = false;
@@ -55,6 +54,40 @@ form.addEventListener('submit', (event) => {
             isDescriptionVisible = !isDescriptionVisible;
         });
 
+        const advanceButton = taskItem.querySelector('#advance-btn');
+        advanceButton.addEventListener('click', () => {
+            const currentList = taskItem.parentElement;
+            if (currentList.classList.contains('a-list')) {
+                const eList = document.querySelector('.e-list');
+                eList.appendChild(taskItem);
+                advanceButton.querySelector('.material-icons').textContent = 'navigate_next';
+            } else if (currentList.classList.contains('e-list')) {
+                const fList = document.querySelector('.f-list');
+                fList.appendChild(taskItem);
+                advanceButton.querySelector('.material-icons').textContent = 'replay';
+                taskItem.querySelector('h3').classList.add('completed');
+            } else if (currentList.classList.contains('f-list')) {
+                const aList = document.querySelector('.a-list');
+                aList.appendChild(taskItem);
+                advanceButton.querySelector('.material-icons').textContent = 'navigate_next';
+                taskItem.querySelector('h3').classList.remove('completed');
+            }
+        });
+        const backButton = taskItem.querySelector('#back-btn');
+        backButton.addEventListener('click', () => {
+            const currentList = taskItem.parentElement;
+            if (currentList.classList.contains('e-list')) {
+                const aList = document.querySelector('.a-list');
+                aList.appendChild(taskItem);
+            } else if (currentList.classList.contains('f-list')) {
+                const eList = document.querySelector('.e-list');
+                eList.appendChild(taskItem);
+                advanceButton.querySelector('.material-icons').textContent = 'navigate_next';
+                taskItem.querySelector('h3').classList.remove('completed');
+            }
+        });
+        
+        
         const removeButton = taskItem.querySelector('#remove-btn');
         removeButton.addEventListener('click', () => {
             const confirmation = confirm('Tem certeza que deseja excluir esta tarefa?');
