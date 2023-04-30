@@ -23,7 +23,7 @@ form.addEventListener('submit', (event) => {
                     <p>Ler descrição</p>
                     <span class="material-icons">expand_more</span>
                 </button>
-                <p>${taskDescriptionText}</p>
+                <p class="hidden">${taskDescriptionText}</p>
             </div>
             <div class="status">
                 <button id="back-btn">
@@ -38,7 +38,23 @@ form.addEventListener('submit', (event) => {
         taskList.appendChild(taskItem);
         taskInput.value = '';
         taskDescriptionTextarea.value = '';
-        
+
+        const descriptionBtn = taskItem.querySelector('#description-btn');
+        const descriptionText = taskItem.querySelector('.description p.hidden');
+        let isDescriptionVisible = false;
+        descriptionBtn.addEventListener('click', () => {
+            if (isDescriptionVisible) {
+                descriptionText.style.display = 'none';
+                descriptionBtn.querySelector('p').textContent = 'Ler descrição';
+                descriptionBtn.querySelector('.material-icons').textContent = 'expand_more';
+            } else {
+                descriptionText.style.display = 'flex';
+                descriptionBtn.querySelector('p').textContent = 'Esconder descrição';
+                descriptionBtn.querySelector('.material-icons').textContent = 'expand_less';
+            }
+            isDescriptionVisible = !isDescriptionVisible;
+        });
+
         const removeButton = taskItem.querySelector('#remove-btn');
         removeButton.addEventListener('click', () => {
             const confirmation = confirm('Tem certeza que deseja excluir esta tarefa?');

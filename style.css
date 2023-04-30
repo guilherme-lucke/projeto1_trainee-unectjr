@@ -223,7 +223,7 @@ li .body{
 }
 
 #description-btn p {
-    width: 80px;
+    max-width: 118px;
     height: 18px;
     font-family: 'Poppins';
     font-style: normal;
@@ -238,6 +238,10 @@ li .body{
     font-weight: 400;
     font-size: 12px;
     line-height: 12px;
+}
+
+.description p.hidden {
+    display: none;
 }
 
 li .status {
