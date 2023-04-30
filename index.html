@@ -20,18 +20,79 @@
             </span>
         </button>
     </header>
-    <div class="container"></div>
-    <div class="frase">
-        <span class="circle">
-            <span>
-                <i class="material-icons">tips_and_updates</i>
+    <div class="container">
+        <div class="frase">
+            <span class="circle">
+                <span>
+                    <i class="material-icons">tips_and_updates</i>
+                </span>
             </span>
-        </span>
-        <div class="dia">
-            <h6>Frase do dia</h6>
-            <p>Se você quer um pedacinho do paraíso, acredite em Deus. Mas se você<br>
-                quer conquistar o mundo, acredite em você porque Deus já te deu tudo o<br>
-                que você precisa para você vencer.</p>
+            <div class="dia">
+                <h6>Frase do dia</h6>
+                <p>Se você quer um pedacinho do paraíso, acredite em Deus. Mas se você<br>
+                    quer conquistar o mundo, acredite em você porque Deus já te deu tudo o<br>
+                    que você precisa para você vencer.</p>
+            </div>
+        </div>
+        <div class="kanban">
+            <div class="a fazer">
+                <div class="header">
+                    <h2>A Fazer</h2>
+                    <button id="add-task-btn">
+                        <span class="material-icons">add</span>
+                    </button>
+                </div>
+                <ul class="a-list">
+                    <div class="li">
+                        <div class="header">
+                            <h3>Fazer compras no mercado que fica perto da minha casa</h3>
+                            <button class="material-icons" id="remove-btn">delete_outline</button>
+                        </div>
+                        <div class="body">
+                            <div class="description">
+                                <button id="description-btn">
+                                    <p>Ler descrição</p>
+                                    <span class="material-icons">expand_more</span>
+                                </button>
+                                <p>Comprar batata, cenoura,
+                                    feijdo, alho, arroz e pipoca.</p>
+                            </div>
+                            <div class="status">
+                                <button id="back-btn">
+                                    <span class="material-icons">navigate_before</span>
+                                </button>
+                                <button id="advance-btn">
+                                    <span class="material-icons">navigate_next</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <div class="em andamento">
+                <h2 class="header">Em andamento</h2>
+                <ul class="e-list"></ul>
+            </div>
+            <div class="Feito">
+                <h2 class="header">Feito</h2>
+                <ul class="f-list"></ul>
+            </div>
+        </div>
+        <div class="modal">
+            <div class="new-task">
+                <h2>Nova Task</h2>
+                <hr>
+                <form>
+                    <p>Título*</p>
+                    <input type="text" required>
+                    <p>Descrição</p>
+                    <textarea class="text-description" type="text"></textarea>
+                    <button id="new-task-btn" type="submit">Criar Task</button>
+                </form>
+                <button id="close-btn">
+                    <span class="material-icons">close</span>
+                </button>
+            </div>
         </div>
     </div>
     <footer>
@@ -42,6 +103,8 @@
             <p>por <strong>Guilherme Lucke</strong></p>
         </div>
     </footer>
+    
+    <script src="script.js"></script>
 </body>
 
 </html>

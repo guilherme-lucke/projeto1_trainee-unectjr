@@ -55,15 +55,13 @@ header button .circle i {
     color: #FBB910;
 }
 
-
 .container {
-    display: flex;
     padding: 22px;
+    margin-left: 160px;
 }
 
 .frase{
     width: 570px;
-    margin-left: 160px;
     padding: 16px;
     display: flex;
     background: #FFFFFF;
@@ -72,8 +70,9 @@ header button .circle i {
 }
 
 .frase .circle {
-    width: 44px;
-    height: 44px;
+    width: 34px;
+    height: 34px;
+    padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -126,6 +125,165 @@ header button .circle i {
     color: #141414;
 }
 
+.kanban {
+    display: flex;
+    padding: 10px;
+}
+
+.kanban .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.kanban h2 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #141414;
+}
+
+#add-task-btn {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #226ED8;
+    background: none;
+    border-radius: 40px;
+}
+
+#add-task-btn span{
+    width: 16px;
+    height: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #226ED8;
+}
+
+ul {
+    width: 293px;
+    height: 337px;
+    padding: 20px;
+    flex-wrap: wrap;
+    background: #EEEEEE;
+    border-radius: 10px;
+}
+
+.li {
+    padding: 12px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    display: none;
+}
+
+.li h3 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: #141414;
+}
+
+#remove-btn {
+    width: 16px;
+    height: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #DF0000;
+    background: none;
+    border: none;
+}
+
+.li .body{
+    display: flex;
+    justify-content: space-between;
+}
+
+#description-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    color: #141414;
+}
+
+#description-btn p {
+    width: 80px;
+    height: 18px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+#description-btn span {
+    width: 12px;
+    height: 12px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.status {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#back-btn {
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid #226ED8;
+    border-radius: 20px;
+}
+
+#back-btn span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #226ED8;
+}
+
+#advance-btn {
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #226ED8;
+    border-radius: 20px;
+    border: none;
+}
+
+#advance-btn span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px; 
+    color: #FFFFFF;
+}
+
+.em.andamento {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
 footer {
     position: fixed;
     bottom: 0;
@@ -166,4 +324,128 @@ footer span{
     margin-left: 5px;
     margin-right: 5px;
     color: #FFAFAF;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal .new-task {
+    position: relative;
+    background-color: white;
+    padding: 30px 50px 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    margin-right: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal h2 {
+    margin: auto;
+    width: 106px;
+    height: 30px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: #3867D6;
+}
+
+hr {
+    margin: auto;
+    padding: 3px;
+    width: 121px;
+    border-radius: 10px;
+    background: #3867D6;
+    color: #3867D6;
+}
+
+.modal fieldset {
+    border: none;
+}
+
+.modal p {
+    margin-bottom: 6px;
+    width: 44px;
+    height: 18px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    color: #141414;
+}
+
+input[type="text"], textarea {
+    width: 374px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background: #EEEEEE;
+    border-radius: 10px;
+    border: none;
+    height: auto;
+}
+
+textarea {
+    min-height: 90px;
+    min-width: 374px;
+}
+
+#new-task-btn {
+    margin-top: 20px;
+    padding: 10px;
+    width: 394px;
+    height: 41px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #FFFFFF;
+    background: linear-gradient(90.35deg, #4890F5 0%, #226ED8 99.7%);
+    border-radius: 20px;
+    border: none;
+    
+}
+
+#close-btn {
+    box-sizing: border-box;
+    position: absolute;
+    margin: 10px;
+    top: 0px;
+    right: 0px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #3867D6;
+    border-radius: 20px;
+    background: none;
+}
+
+#close-btn span {
+    width: 14px;
+    height: 14px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: #3867D6;
 }
