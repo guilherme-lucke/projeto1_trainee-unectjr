@@ -109,3 +109,4 @@ closeModalBtn.addEventListener('click', () => {
 form.addEventListener('submit', () => {
     modal.classList.remove('show');
 });
+

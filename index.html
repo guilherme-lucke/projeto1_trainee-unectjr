@@ -3,31 +3,43 @@
 
 <head>
     <title>meu primeiro site</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark_theme.css">
+    <script src="js/dark_theme.js" defer></script>
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
     <header>
-        <img src="WhiteLogo.png" alt="logo unect branca">
+        <div class="logo">
+            <img class= "white" src="img/WhiteLogo.png" alt="logo unect branca">
+            <img class= "blue" src="img/BlueLogo.png" alt="logo unect azul">
+        </div>
         <h1>uTask 3.0</h1>
-        <button>
-            <span class="circle">
-                <i class="material-icons">light_mode</i>
-            </span>
-        </button>
+        <div>
+            <input type="checkbox" id="change-theme"/>
+            <label for="change-theme">
+                <i class="button">
+                    <i class="circle">
+                        <i class="material-icons" id="sun">light_mode</i>
+                        <i class="material-icons" id="moon">dark_mode</i>
+                    </i>
+                </i>
+            </label>
+        </div>  
     </header>
-    <div class="container">
+    <main>
         <div class="frase">
             <span class="circle">
                 <span>
                     <i class="material-icons">tips_and_updates</i>
                 </span>
             </span>
-            <div class="dia">
+            <div>
                 <h6>Frase do dia</h6>
                 <p>Se você quer um pedacinho do paraíso, acredite em Deus. Mas se você<br>
                     quer conquistar o mundo, acredite em você porque Deus já te deu tudo o<br>
@@ -69,7 +81,7 @@
                 </button>
             </div>
         </div>
-    </div>
+    </main>
     <footer>
         <p>© Processo de Trainee <a href="https://unect.com.br/"><strong>Unect Jr.</strong></a> 2023.1</p>
         <div class="amor">
@@ -78,8 +90,6 @@
             <p>por <strong>Guilherme Lucke</strong></p>
         </div>
     </footer>
-    
-    <script src="script.js"></script>
 </body>
 
 </html>

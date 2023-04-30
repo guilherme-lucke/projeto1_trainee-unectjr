@@ -19,6 +19,10 @@ header img {
     height: 40px;
 }
 
+.logo .blue {
+    display: none;
+}
+
 header h1 {
     font-family: 'Poppins';
     font-style: normal;
@@ -28,8 +32,11 @@ header h1 {
     color: #FAFAFA;
 }
 
-header button {
-    padding: 11px;
+input[type="checkbox"] {
+    display: none;
+}
+
+header .button {
     width: 50px;
     height: 24px;
     display: flex;
@@ -37,37 +44,50 @@ header button {
     background: linear-gradient(90deg, #FFC93F 0%, #FFC93F 0.01%, #FFE03F 100%);
     border: none;
     border-radius: 50px;
+    cursor: pointer;
+    position: relative;
 }
 
-header button .circle {
+header .button .circle {
+    margin-left: 2px;
     width: 20px;
     height: 20px;
-    position: relative;
-    right: 9px;
     display: flex;
     justify-content: center;
     align-items: center;
     background: #FFFFFF;
     border-radius: 100px;
+    cursor: pointer;
 }
 
-header button .circle i {
+.button i {
     font-size: 16px;
+}
+
+i #sun{
     color: #FBB910;
 }
 
-.container {
-    padding: 22px;
-    margin-left: 160px;
+i #moon {
+    display: none;
+}
+
+main {
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+    background: #FFFFFF;
+    color: #141414
 }
 
 .frase{
     width: 570px;
     padding: 16px;
     display: flex;
-    background: #FFFFFF;
     box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.04);
     border-radius: 20px;
+    margin-bottom: 10px;
 }
 
 .frase .circle {
@@ -79,6 +99,7 @@ header button .circle i {
     align-items: center;
     background: #FFFCEE;
     border-radius: 100px;
+    margin-right: 7px;
 }
 
 .frase .circle span{
@@ -91,17 +112,13 @@ header button .circle i {
     border-radius: 100px;
 }
 
-.frase i {
+.frase .circle i {
     width: 24px;
     height: 24px;
     font-weight: 400;
     font-size: 24px;
     line-height: 24px;
     color: #FBB910;
-}
-
-.frase .dia {
-    margin-left: 7px;
 }
 
 .frase h6 {
@@ -112,7 +129,7 @@ header button .circle i {
     font-weight: 700;
     font-size: 12px;
     line-height: 18px;
-    color: #141414;
+    margin-bottom: 6px;
 }
 
 .frase p {
@@ -123,7 +140,6 @@ header button .circle i {
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
-    color: #141414;
 }
 
 .kanban {
@@ -148,7 +164,6 @@ header button .circle i {
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;
-    color: #141414;
 }
 
 #add-task-btn {
@@ -182,6 +197,20 @@ ul {
     overflow-x: auto;
 }
 
+ul::-webkit-scrollbar {
+    width: 6px;
+    height: 270px;
+}
+
+ul::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+ul::-webkit-scrollbar-thumb {
+    background: #C4C4C4;
+    border-radius: 20px;
+}
+
 li {
     padding: 12px;
     background: #FFFFFF;
@@ -196,7 +225,6 @@ li h3 {
     font-weight: 600;
     font-size: 14px;
     line-height: 21px;
-    color: #141414;
 }
 
 #remove-btn {
@@ -221,7 +249,7 @@ li .body{
     align-items: center;
     background: none;
     border: none;
-    color: #141414;
+    color: #141414
 }
 
 #description-btn p {
@@ -251,7 +279,6 @@ li .status {
     right: 0;
     bottom: 0;
     margin: 10px;
-    
     width: 46px;
     display: flex;
     justify-content: space-around;
@@ -372,7 +399,7 @@ footer span{
     background-color: white;
     padding: 30px 50px 40px 50px;
     border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     max-width: 400px;
     margin-right: 20px;
     justify-content: center;
@@ -391,15 +418,19 @@ footer span{
     color: #3867D6;
 }
 
-hr {
+.modal hr {
     margin: auto;
     padding: 3px;
     width: 121px;
     border-radius: 10px;
     background: #3867D6;
+    border: none;
     color: #3867D6;
 }
 
+form {
+    color: #141414;
+}
 
 .modal p {
     margin-bottom: 6px;
@@ -410,11 +441,6 @@ hr {
     font-weight: 600;
     font-size: 12px;
     line-height: 18px;
-    color: #141414;
-}
-
-form {
-    
 }
 
 input[type="text"], textarea {
@@ -474,3 +500,4 @@ textarea {
     line-height: 14px;
     color: #3867D6;
 }
+

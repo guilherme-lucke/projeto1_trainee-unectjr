@@ -1,0 +1,143 @@
+.dark, .dark main {
+    background: #211D20;
+}
+
+.dark header {
+    background: #333333;
+}
+
+.dark .logo .blue {
+    display: block;
+}
+
+.dark .logo .white {
+    display: none;
+}
+
+.dark header h1 {
+    color: #3867D6;
+}
+
+.dark header .button {
+    background: linear-gradient(269.72deg, #222222 0.23%, #111111 0.24%, #2E2E2E 99.76%);
+}
+
+.dark header .button .circle {
+    background: #FAFAFA;
+    position: absolute;
+    left: none;
+    right: 2px;
+}
+
+.dark i #moon {
+    display: block;
+}
+
+.dark i #sun {
+    display: none;
+}
+
+.dark main {
+    color: #FAFAFA;
+}
+
+.dark .frase {
+    background: #3D3D3D;
+}
+
+.dark .frase .circle {
+    background: #515151;
+}
+
+.dark .frase .circle span {
+    background: #3D3D3D;
+}
+
+.dark .frase .circle i {
+    color: #FFFFFF;
+}
+
+.dark #add-task-btn {
+    border: 2px solid #3867D6;
+}
+
+.dark #add-task-btn span {
+    color: #3867D6;
+}
+
+.dark ul {
+    background: #333333;
+}
+
+.dark ul::-webkit-scrollbar-thumb {
+    background: #515151;
+}
+
+.dark li {
+    background: #3D3D3D;
+}
+
+.dark #remove-btn {
+    color: #FFAFAF;
+}
+
+.dark #description-btn {
+    color: #FAFAFA;
+}
+
+.dark #back-btn {
+    background: #3D3D3D;
+    border: 1px solid #226ED8;
+}
+
+.dark #back-btn span {
+    color: #226ED8;
+}
+
+.dark #advance-btn {
+    background: #226ED8;
+}
+
+.dark #advance-btn span {
+    color: #3D3D3D;
+}
+
+.dark footer {
+    background: #111111;
+}
+
+
+.dark .modal .new-task {
+    background: #3D3D3D;
+}
+
+.dark .modal h2 {
+    color: #226ED8;
+}
+
+.dark hr {
+    background: #226ED8;
+    color: #226ED8;
+}
+
+.dark form {
+    color: #FAFAFA;
+}
+
+.dark input[type="text"], .dark
+textarea {
+    background: #333333;
+}
+
+.dark #new-task-btn {
+    color: #FFFFFF;
+    background: linear-gradient(90.35deg, #4890F5 0%, #226ED8 99.7%);
+}
+
+.dark #close-btn {
+    border: 2px solid #226ED8;
+}
+
+.dark #close-btn span {
+    color: #226ED8;
+}
