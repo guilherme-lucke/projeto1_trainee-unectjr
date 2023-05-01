@@ -127,6 +127,7 @@
 .dark input[type="text"], .dark
 textarea {
     background: #333333;
+    color: #FAFAFA;
 }
 
 .dark #new-task-btn {

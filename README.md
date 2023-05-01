@@ -1,4 +1,4 @@
-# Utask - Projeto 1 Trainee
+# Utask - Projeto Trainee 2023.1
 Bem-vindo ao projeto Utask, desenvolvido como parte do treinamento para trainees da empresa Unect Jr. O objetivo deste projeto é desenvolver habilidades básicas de programação front-end, utilizando as linguagens HTML/CSS e JS.
 
 ## Sobre o Projeto

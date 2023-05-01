@@ -134,7 +134,6 @@ main {
 
 .frase p {
     width: 532px;
-    height: 63px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
@@ -448,6 +447,7 @@ input[type="text"], textarea {
     padding: 10px;
     margin-bottom: 20px;
     background: #EEEEEE;
+    color: #141414;
     border-radius: 10px;
     border: none;
     height: auto;
@@ -456,6 +456,8 @@ input[type="text"], textarea {
 textarea {
     min-height: 90px;
     min-width: 374px;
+    max-height: 90px;
+    max-width: 374px;
 }
 
 #new-task-btn {
