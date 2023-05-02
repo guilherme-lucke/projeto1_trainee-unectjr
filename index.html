@@ -17,77 +17,85 @@
 
 <body>
     <header>
-        <div class="logo">
-            <img class= "white" src="img/WhiteLogo.png" alt="logo unect branca">
-            <img class= "blue" src="img/BlueLogo.png" alt="logo unect azul">
-        </div>
-        <h1>uTask 3.0</h1>
-        <div>
-            <input type="checkbox" id="change-theme"/>
-            <label for="change-theme">
-                <i class="button">
-                    <i class="circle">
-                        <i class="material-icons" id="sun">light_mode</i>
-                        <i class="material-icons" id="moon">dark_mode</i>
+        <div class="container">
+            <div class="logo">
+                <img class="white" src="img/WhiteLogo.png" alt="logo unect branca">
+                <img class="blue" src="img/BlueLogo.png" alt="logo unect azul">
+            </div>
+            <h1>uTask 3.0</h1>
+            <div>
+                <input type="checkbox" id="change-theme" />
+                <label for="change-theme">
+                    <i class="button">
+                        <i class="circle">
+                            <i class="material-icons" id="sun">light_mode</i>
+                            <i class="material-icons" id="moon">dark_mode</i>
+                        </i>
                     </i>
-                </i>
-            </label>
+                </label>
+            </div>
         </div>  
     </header>
     <main>
-        <div class="frase">
-            <span class="circle">
-                <span>
-                    <i class="material-icons">tips_and_updates</i>
-                </span>
-            </span>
-            <div>
-                <h6>Frase do dia</h6>
-                <p id="frase-text">Carregando frase...</p>
-            </div>
-        </div>
-        <div class="kanban">
-            <div class="a fazer">
-                <div class="header">
-                    <h2>A Fazer</h2>
-                    <button id="add-task-btn">
-                        <span class="material-icons">add</span>
-                    </button>
+        <section class="cards">
+            <div class="frase">
+                <div class="container">
+                    <i class="circle">
+                        <span>
+                            <i class="material-icons">tips_and_updates</i>
+                        </span>
+                    </i>
+                    <div class="text">
+                        <h6>Frase do dia</h6>
+                        <p id="frase-text">Carregando frase...</p>
+                    </div>
                 </div>
-                <ul class="a-list"></ul>
             </div>
-            <div class="em andamento">
-                <h2 class="header">Em andamento</h2>
-                <ul class="e-list"></ul>
+            <div class="kanban">
+                <div class="card">
+                    <div class="header">
+                        <h2>A Fazer</h2>
+                        <button id="add-task-btn">
+                            <i class="material-icons">add</i>
+                        </button>
+                    </div>
+                    <ul class="a-list"></ul>
+                </div>
+                <div class="card">
+                    <h2 class="header">Em andamento</h2>
+                    <ul class="e-list"></ul>
+                </div>
+                <div class="card">
+                    <h2 class="header">Feito</h2>
+                    <ul class="f-list"></ul>
+                </div>
             </div>
-            <div class="Feito">
-                <h2 class="header">Feito</h2>
-                <ul class="f-list"></ul>
-            </div>
-        </div>
-        <div class="modal">
-            <div class="new-task">
-                <h2>Nova Task</h2>
-                <hr>
-                <form>
-                    <p>Título*</p>
-                    <input type="text" required>
-                    <p>Descrição</p>
-                    <textarea class="text-description" type="text"></textarea>
-                    <button id="new-task-btn" type="submit">Criar Task</button>
-                </form>
-                <button id="close-btn">
-                    <span class="material-icons">close</span>
-                </button>
-            </div>
-        </div>
+        </section>    
     </main>
+    <div class="modal">
+        <div class="container">
+            <h2>Nova Task</h2>
+            <hr>
+            <form>
+                <p>Título*</p>
+                <input type="text" required>
+                <p>Descrição</p>
+                <textarea class="text-description" type="text"></textarea>
+                <button id="new-task-btn" type="submit">Criar Task</button>
+            </form>
+            <button id="close-btn">
+                <i class="material-icons">close</i>
+            </button>
+        </div>
+    </div>
     <footer>
-        <p>© Processo de Trainee <a href="https://unect.com.br/"><strong>Unect Jr.</strong></a> 2023.1</p>
-        <div class="amor">
-            <p>Feito com</p>
-            <span class="material-icons">favorite</span>
-            <p>por <strong>Guilherme Lucke</strong></p>
+        <div class="container">
+            <p>© Processo de Trainee <a href="https://unect.com.br/"><strong>Unect Jr.</strong></a> 2023.1</p>
+            <div class="amor">
+                <p>Feito com</p>
+                <i class="material-icons">favorite</i>
+                <p>por <strong>Guilherme Lucke</strong></p>
+            </div>
         </div>
     </footer>
 </body>

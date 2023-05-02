@@ -13,24 +13,24 @@ form.addEventListener('submit', (event) => {
     if (taskText !== '') {
         const taskItem = document.createElement('li');
         taskItem.innerHTML = `
-      <div class="header">
+      <div>
         <h3>${taskText}</h3>
         <button class="material-icons" id="remove-btn">delete_outline</button>
       </div>
-      <div class="body">
+      <div>
             <div class="description">
                 <button id="description-btn">
                     <p>Ler descrição</p>
-                    <span class="material-icons">expand_more</span>
+                    <i class="material-icons">expand_more</i>
                 </button>
                 <p class="hidden">${taskDescriptionText}</p>
             </div>
             <div class="status">
                 <button id="back-btn">
-                    <span class="material-icons">navigate_before</span>
+                    <i class="material-icons">navigate_before</i>
                 </button>
                 <button id="advance-btn">
-                    <span class="material-icons">navigate_next</span>
+                    <i class="material-icons">navigate_next</i>
                 </button>
             </div>
         </div>
