@@ -1,5 +1,6 @@
 .dark, .dark main {
-    background: #211D20;
+    background: #222222;
+    color: #FAFAFA;
 }
 
 .dark header {
@@ -37,11 +38,7 @@
     display: none;
 }
 
-.dark main {
-    color: #FAFAFA;
-}
-
-.dark .frase {
+.dark .frase .container{
     background: #3D3D3D;
 }
 
@@ -61,7 +58,7 @@
     border: 2px solid #3867D6;
 }
 
-.dark #add-task-btn span {
+.dark #add-task-btn i {
     color: #3867D6;
 }
 
@@ -81,8 +78,12 @@
     color: #FFAFAF;
 }
 
-.dark #description-btn {
+.dark #visible-btn {
     color: #FAFAFA;
+}
+
+.dark #hidden-btn {
+    color: #5C9DFF;
 }
 
 .dark #back-btn {
@@ -90,7 +91,7 @@
     border: 1px solid #226ED8;
 }
 
-.dark #back-btn span {
+.dark #back-btn i {
     color: #226ED8;
 }
 
@@ -98,7 +99,7 @@
     background: #226ED8;
 }
 
-.dark #advance-btn span {
+.dark #advance-btn i {
     color: #3D3D3D;
 }
 
@@ -106,8 +107,7 @@
     background: #111111;
 }
 
-
-.dark .modal .new-task {
+.dark .modal .container {
     background: #3D3D3D;
 }
 
@@ -117,7 +117,6 @@
 
 .dark hr {
     background: #226ED8;
-    color: #226ED8;
 }
 
 .dark form {
@@ -130,15 +129,10 @@ textarea {
     color: #FAFAFA;
 }
 
-.dark #new-task-btn {
-    color: #FFFFFF;
-    background: linear-gradient(90.35deg, #4890F5 0%, #226ED8 99.7%);
-}
-
 .dark #close-btn {
     border: 2px solid #226ED8;
 }
 
-.dark #close-btn span {
+.dark #close-btn i {
     color: #226ED8;
 }

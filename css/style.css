@@ -28,6 +28,11 @@ header .container{
     flex-wrap: wrap;
 }
 
+header img {
+    width: 23.28px;
+    height: 40px;
+}
+
 .logo .blue {
     display: none;
 }
@@ -70,7 +75,9 @@ header .button .circle {
 }
 
 .button i {
+    font-weight: 400;
     font-size: 16px;
+    line-height: 16px;
 }
 
 i #sun{
@@ -79,6 +86,7 @@ i #sun{
 
 i #moon {
     display: none;
+    color: #222222;
 }
 
 /* MAIN */
@@ -99,7 +107,6 @@ main {
 }
 
 .frase {
-    background: #DF0000;
     padding: 32px 340px 32px 0;
 }
 
@@ -170,7 +177,6 @@ main {
 }
 
 .kanban {
-    background: yellow;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -269,16 +275,25 @@ li h3 {
     border: none;
 }
 
-#description-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: none;
-    border: none;
-    color: #141414
+#description input[type="checkbox"] {
+    display: none;
 }
 
-#description-btn p {
+#visible-btn {
+    display: flex;
+    color: #141414;
+}
+
+#hidden-btn {
+    display: none;
+    color: #002D6C;
+}
+
+#description span {
+    align-items: center;
+}
+
+#description span p {
     max-width: 118px;
     font-family: 'Poppins';
     font-style: normal;
@@ -287,7 +302,7 @@ li h3 {
     line-height: 18px;
 }
 
-#description-btn i {
+#description span i {
     width: 12px;
     height: 12px;
     font-weight: 400;
@@ -295,7 +310,7 @@ li h3 {
     line-height: 12px;
 }
 
-.description p.hidden {
+#description p.hidden {
     width: 195px;
     display: none;
     font-family: 'Poppins';
@@ -303,6 +318,14 @@ li h3 {
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
+}
+
+.visible #hidden-btn {
+    display: flex;
+}
+
+.visible #visible-btn {
+    display: none;
 }
 
 li .status {
@@ -440,9 +463,9 @@ footer .amor {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: white;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     position: relative;
 }
 

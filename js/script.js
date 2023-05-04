@@ -18,11 +18,20 @@ form.addEventListener('submit', (event) => {
         <button class="material-icons" id="remove-btn">delete_outline</button>
       </div>
       <div>
-            <div class="description">
-                <button id="description-btn">
-                    <p>Ler descrição</p>
-                    <i class="material-icons">expand_more</i>
-                </button>
+            <div id="description">
+		        <div>
+	                <input type="checkbox" id="description-btn" />
+	                <label for="description-btn">
+	                    <span id="visible-btn">
+	                        <p>Ler descrição</p>
+	                        <i class="material-icons">expand_more</i>
+	                    </span>
+	                    <span id="hidden-btn">
+	                        <p>Esconder descrição</p>
+	                        <i class="material-icons">expand_less</i>
+	                    </span>
+	                </label>
+		        </div>
                 <p class="hidden">${taskDescriptionText}</p>
             </div>
             <div class="status">
@@ -38,20 +47,14 @@ form.addEventListener('submit', (event) => {
         taskList.appendChild(taskItem);
         taskInput.value = '';
         taskDescriptionTextarea.value = '';
+
         const descriptionBtn = taskItem.querySelector('#description-btn');
-        const descriptionText = taskItem.querySelector('.description p.hidden');
-        let isDescriptionVisible = false;
-        descriptionBtn.addEventListener('click', () => {
-            if (isDescriptionVisible) {
-                descriptionText.style.display = 'none';
-                descriptionBtn.querySelector('p').textContent = 'Ler descrição';
-                descriptionBtn.querySelector('.material-icons').textContent = 'expand_more';
-            } else {
-                descriptionText.style.display = 'flex';
-                descriptionBtn.querySelector('p').textContent = 'Esconder descrição';
-                descriptionBtn.querySelector('.material-icons').textContent = 'expand_less';
-            }
-            isDescriptionVisible = !isDescriptionVisible;
+        const description = taskItem.querySelector('#description');
+        const descriptionText = taskItem.querySelector('#description p.hidden');
+
+        descriptionBtn.addEventListener('change', () => {
+            description.classList.toggle('visible');
+            descriptionText.style.display = description.classList.contains('visible') ? 'flex' : 'none';
         });
 
         const advanceButton = taskItem.querySelector('#advance-btn');
@@ -86,7 +89,6 @@ form.addEventListener('submit', (event) => {
                 taskItem.querySelector('h3').classList.remove('completed');
             }
         });
-        
         
         const removeButton = taskItem.querySelector('#remove-btn');
         removeButton.addEventListener('click', () => {
