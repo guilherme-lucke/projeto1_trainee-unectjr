@@ -1,14 +1,6 @@
 const adviceElement = document.querySelector('.frase p');
 
 function getAdvice() {
-    const lastRequestDate = localStorage.getItem('last_request_date');
-    const today = new Date().toISOString().slice(0, 10);
-
-    if (lastRequestDate === today) {
-        // Não faz a requisição, pois já foi feita hoje
-        return;
-    }
-
     fetch('https://api.adviceslip.com/advice')
         .then(response => response.json())
         .then(data => {
@@ -21,9 +13,7 @@ function getAdvice() {
         .then(data => {
             const translatedAdvice = data.responseData.translatedText;
             adviceElement.textContent = translatedAdvice;
-
-            // Atualiza a data da última requisição no localStorage
-            localStorage.setItem('last_request_date', today);
+            localStorage.setItem('translatedAdvice', translatedAdvice); 
         })
         .catch(error => {
             console.error('Ocorreu um erro:', error);
@@ -31,6 +21,17 @@ function getAdvice() {
         });
 }
 
-getAdvice();
+const lastRequestDay = localStorage.getItem('lastRequestDay');
+const today = new Date().toLocaleDateString();
+if (lastRequestDay !== today) {
+    getAdvice();
+    localStorage.setItem('lastRequestDay', today);
+} else {
+    const translatedAdvice = localStorage.getItem('translatedAdvice');
+    adviceElement.textContent = translatedAdvice;
+}
 
-setInterval(getAdvice, 24 * 60 * 60 * 1000);
+setInterval(() => {
+    localStorage.removeItem('lastRequestDay');
+    getAdvice();
+}, 24 * 60 * 60 * 1000);
