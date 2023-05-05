@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>meu primeiro site</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,8 +11,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/dark_theme.css">
-    <script src="js/api's.js" defer></script>
+    <link rel="stylesheet" href="css/responsivo.css">
     <script src="js/dark_theme.js" defer></script>
+    <script src="js/api's.js" defer></script>
     <script src="js/script.js" defer></script>
 </head>
 
@@ -39,20 +41,33 @@
     <main>
         <section class="cards">
             <div class="frase">
-                <div class="container">
+                <button id="show-frase-btn">
                     <i class="circle">
                         <span>
                             <i class="material-icons">tips_and_updates</i>
                         </span>
                     </i>
-                    <div class="text">
-                        <h6>Frase do dia</h6>
-                        <p id="frase-text">Carregando frase...</p>
+                    <h2>Frase do dia</h2>
+                </button>
+                <div class="card">
+                    <div class="container">
+                        <i class="circle">
+                            <span>
+                                <i class="material-icons">tips_and_updates</i>
+                            </span>
+                        </i>
+                        <div class="text">
+                            <h6>Frase do dia</h6>
+                            <p id="frase-text">Carregando frase...</p>
+                        </div>
+                        <button class="close" id="close-frase-btn">
+                            <i class="material-icons">close</i>
+                        </button>
                     </div>
                 </div>
             </div>
             <div class="kanban">
-                <div class="card">
+                <div>
                     <div class="header">
                         <h2>A Fazer</h2>
                         <button id="add-task-btn">
@@ -61,11 +76,11 @@
                     </div>
                     <ul class="a-list"></ul>
                 </div>
-                <div class="card">
+                <div class="em andamento">
                     <h2 class="header">Em andamento</h2>
                     <ul class="e-list"></ul>
                 </div>
-                <div class="card">
+                <div>
                     <h2 class="header">Feito</h2>
                     <ul class="f-list"></ul>
                 </div>
@@ -83,7 +98,7 @@
                 <textarea class="text-description" type="text"></textarea>
                 <button id="new-task-btn" type="submit">Criar Task</button>
             </form>
-            <button id="close-btn">
+            <button class="close" id="close-btn">
                 <i class="material-icons">close</i>
             </button>
         </div>

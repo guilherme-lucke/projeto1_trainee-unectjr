@@ -5,30 +5,45 @@
     box-sizing: border-box;
 }
 
+html {
+    /*a cada Irem será considera 10px*/
+    font-size: 62.5%;
+}
+
 html, body {
     height: 100vh;
+    font-family: 'Poppins';
+    font-style: normal;
+}
+
+body {
+    font-size: 1.6rem;
 }
 
 /* HEADER */
 
 header {
+    padding: 20px 0;
+    margin-bottom: 32px;
     display: flex;
     justify-content: center;
+    align-items: center;
     background: #226ED8;
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
 }
 
 header .container{
-    padding: 18px 0;
     width: 90%;
-    max-width: 980px;
+    max-width: 960px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
     flex-wrap: wrap;
+    font-size: 30px;
 }
 
-header img {
+header img, .logo {
     width: 23.28px;
     height: 40px;
 }
@@ -38,8 +53,6 @@ header img {
 }
 
 header h1 {
-    font-family: 'Poppins';
-    font-style: normal;
     font-weight: 700;
     font-size: 30px;
     line-height: 45px;
@@ -103,27 +116,50 @@ main {
     flex-direction: column;
     justify-content: center;
     width: 90%;
-    max-width: 980px;
+    max-width: 960px;
+    margin-bottom: 32px;
 }
 
 .frase {
-    padding: 32px 340px 32px 0;
+    margin-bottom: 32px;
+}
+
+#show-frase-btn {
+    padding: 8px 22px;
+    width: 287px;
+    display: none;
+    align-items: center;
+    text-align: center;
+    background: #FFD569;
+    border-radius: 10px;
+    border: none;
+}
+
+#show-frase-btn h2 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
 }
 
 .frase .container{
+    max-width: 620px;
     padding: 16px;
-    padding-right: 20px;
-    width: 620px;
     display: flex;
-    justify-content: space-between;
     background: #FFFFFF;
     box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.04);
-    border-radius: 20px;   
+    border-radius: 20px;
+}
+
+#close-frase-btn {
+    display: none;
 }
 
 .frase .circle {
     width: 44px;
     height: 44px;
+    margin-right: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -151,16 +187,12 @@ main {
 }
 
 .frase .text {
-    width: 90%;
-    max-width: 532px;;
     display: flex;
     flex-direction: column;
 }
 
 .frase h6 {
     margin-bottom: 6px;
-    font-family: 'Poppins';
-    font-style: normal;
     font-weight: 700;
     font-size: 12px;
     line-height: 18px;
@@ -168,9 +200,6 @@ main {
 }
 
 .frase p {
-    width: 532px;
-    font-family: 'Poppins';
-    font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
@@ -180,13 +209,25 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow-y: auto;
+    padding-bottom: 5px;
 }
 
-.kanban .card {
-    width: 293px;
+.kanban::-webkit-scrollbar {
+    height: 3px;
+}
+
+.kanban::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.kanban::-webkit-scrollbar-thumb {
+    background: #C4C4C4;
+    border-radius: 20px;
 }
 
 .kanban .header {
+    height: 30px;
     margin-bottom: 8px;
     display: flex;
     justify-content: space-between;
@@ -194,8 +235,6 @@ main {
 }
 
 .kanban h2 {
-    font-family: 'Poppins';
-    font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;
@@ -210,6 +249,7 @@ main {
     border: 2px solid #226ED8;
     background: none;
     border-radius: 40px;
+    cursor: pointer;
 }
 
 #add-task-btn i{
@@ -222,7 +262,7 @@ main {
 }
 
 ul {
-    min-width: 287px;;
+    width: 287px;
     height: 337px;
     background: #EEEEEE;
     border-radius: 10px;
@@ -273,6 +313,7 @@ li h3 {
     color: #DF0000;
     background: none;
     border: none;
+    cursor: pointer;
 }
 
 #description input[type="checkbox"] {
@@ -291,6 +332,7 @@ li h3 {
 
 #description span {
     align-items: center;
+    cursor: pointer;
 }
 
 #description span p {
@@ -347,6 +389,7 @@ li .status {
     background: #FFFFFF;
     border: 1px solid #226ED8;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 #back-btn i {
@@ -365,6 +408,7 @@ li .status {
     background: #226ED8;
     border-radius: 20px;
     border: none;
+    cursor: pointer;
 }
 
 #advance-btn i {
@@ -398,8 +442,6 @@ footer {
     align-items: center;
     background: #114FA7;
     color: #FFFFFF;
-    font-family: 'Poppins';
-    font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
@@ -408,7 +450,7 @@ footer {
 footer .container {
     padding: 15px 0;
     width: 90%;
-    max-width: 980px;
+    max-width: 960px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -532,9 +574,10 @@ textarea {
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
+    cursor: pointer;
 }
 
-#close-btn {
+.close {
     position: absolute;
     top: 0px;
     right: 0px;
@@ -547,9 +590,10 @@ textarea {
     border: 2px solid #3867D6;
     border-radius: 20px;
     background: none;
+    cursor: pointer;
 }
 
-#close-btn i {
+.close i {
     width: 14px;
     height: 14px;
     color: #3867D6;

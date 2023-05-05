@@ -1,3 +1,16 @@
+const showFraseBtn = document.getElementById('show-frase-btn');
+const modalFrase = document.querySelector('.card');
+const closeFraseBtn = document.querySelector('#close-frase-btn');
+
+showFraseBtn.addEventListener('click', () => {
+    modalFrase.classList.add('show');
+});
+
+closeFraseBtn.addEventListener('click', () => {
+    modalFrase.classList.remove('show');
+});
+
+
 const form = document.querySelector('form');
 const taskList = document.querySelector('.a-list');
 const addTaskBtn = document.getElementById('add-task-btn');
@@ -111,4 +124,3 @@ closeModalBtn.addEventListener('click', () => {
 form.addEventListener('submit', () => {
     modal.classList.remove('show');
 });
-

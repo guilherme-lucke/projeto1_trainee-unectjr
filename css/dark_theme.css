@@ -38,6 +38,10 @@
     display: none;
 }
 
+.dark .frase #show-frase-btn {
+    background: #3D3D3D;
+}
+
 .dark .frase .container{
     background: #3D3D3D;
 }
@@ -60,6 +64,10 @@
 
 .dark #add-task-btn i {
     color: #3867D6;
+}
+
+.dark .kanban::-webkit-scrollbar-thumb {
+    background: #515151;
 }
 
 .dark ul {
