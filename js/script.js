@@ -32,7 +32,7 @@ form.addEventListener('submit', (event) => {
       </div>
       <div>
             <div id="description">
-		        <div>
+		        <div class="description-btn">
 	                <input type="checkbox" id="description-btn" />
 	                <label for="description-btn">
 	                    <span id="visible-btn">
@@ -61,9 +61,14 @@ form.addEventListener('submit', (event) => {
         taskInput.value = '';
         taskDescriptionTextarea.value = '';
 
+        const showDescripiontBtn = taskItem.querySelector('.description-btn');
         const descriptionBtn = taskItem.querySelector('#description-btn');
         const description = taskItem.querySelector('#description');
         const descriptionText = taskItem.querySelector('#description p.hidden');
+
+        if (taskDescriptionText === '') {
+            showDescripiontBtn.style.display = 'none'
+        }
 
         descriptionBtn.addEventListener('change', () => {
             description.classList.toggle('visible');

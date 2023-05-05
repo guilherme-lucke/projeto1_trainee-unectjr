@@ -285,6 +285,7 @@ ul::-webkit-scrollbar-thumb {
 
 li {
     padding: 12px;
+    min-height: 61px;
     margin: 14px;
     background: #FFFFFF;
     border-radius: 10px;
@@ -320,6 +321,7 @@ li h3 {
     display: none;
 }
 
+
 #visible-btn {
     display: flex;
     color: #141414;
@@ -329,6 +331,7 @@ li h3 {
     display: none;
     color: #002D6C;
 }
+
 
 #description span {
     align-items: center;
