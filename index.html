@@ -15,6 +15,7 @@
     <script src="js/dark_theme.js" defer></script>
     <script src="js/api's.js" defer></script>
     <script src="js/script.js" defer></script>
+    <script src="js/carrosel.js" defer></script>
 </head>
 
 <body>
@@ -66,23 +67,44 @@
                     </div>
                 </div>
             </div>
-            <div class="kanban">
-                <div>
-                    <div class="header">
-                        <h2>A Fazer</h2>
-                        <button id="add-task-btn">
-                            <i class="material-icons">add</i>
-                        </button>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <button class="prev-btn" id="swiper-prev-btn">
+                        <i class="material-icons">navigate_before</i>
+                    </button>
+                    <button class="prev-btn" id="mobile-prev-btn">
+                        <i class="material-icons">navigate_before</i>
+                    </button>
+                    <div class="kanban">
+                        <div class="a-swiper">
+                            <div class="header">
+                                <h2>A Fazer</h2>
+                                <button id="add-task-btn">
+                                    <i class="material-icons">add</i>
+                                </button>
+                            </div>
+                            <ul class="a-list"></ul>
+                        </div>
+                        <div class="e-swiper">
+                            <h2 class="header">Em andamento</h2>
+                            <ul class="e-list"></ul>
+                        </div>
+                        <div class="f-swiper">
+                            <h2 class="header">Feito</h2>
+                            <ul class="f-list"></ul>
+                        </div>
                     </div>
-                    <ul class="a-list"></ul>
+                    <button class="next-btn" id="swiper-next-btn">
+                        <i class="material-icons">navigate_next</i>
+                    </button>
+                    <button class="next-btn" id="mobile-next-btn">
+                        <i class="material-icons">navigate_next</i>
+                    </button>
                 </div>
-                <div class="em andamento">
-                    <h2 class="header">Em andamento</h2>
-                    <ul class="e-list"></ul>
-                </div>
-                <div>
-                    <h2 class="header">Feito</h2>
-                    <ul class="f-list"></ul>
+                <div class="swiper-pagination">
+                    <span class="pag" id="pag-1"></span>
+                    <span class="pag" id="pag-2"></span>
+                    <span class="pag" id="pag-3"></span>
                 </div>
             </div>
         </section>    
@@ -109,7 +131,7 @@
             <div class="amor">
                 <p>Feito com</p>
                 <i class="material-icons">favorite</i>
-                <p>por <strong>Guilherme Lucke</strong></p>
+                <p>por <a href="https://www.linkedin.com/in/guilherme-lucke-5711b0269/"><strong>Guilherme Lucke</strong></a></p>
             </div>
         </div>
     </footer>

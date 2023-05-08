@@ -107,8 +107,9 @@ i #moon {
 main {
     display: flex;
     justify-content: center;
-    background: #FFFFFF;
+    background: #ffffff;
     color: #141414;
+    position: relative;
 }
 
 .cards{
@@ -119,6 +120,8 @@ main {
     max-width: 960px;
     margin-bottom: 32px;
 }
+
+/* CARD 01*/
 
 .frase {
     margin-bottom: 32px;
@@ -133,6 +136,7 @@ main {
     background: #FFD569;
     border-radius: 10px;
     border: none;
+    cursor: pointer;
 }
 
 #show-frase-btn h2 {
@@ -205,10 +209,60 @@ main {
     line-height: 21px;
 }
 
+/* CARD 02*/
+
+.swiper-pagination {
+    width: 50px;
+    display: none;
+    justify-content: space-between;
+}
+
+.pag {
+    width: 12px;
+    height: 12px;
+    background: #C4C4C4;
+    border-radius: 10px;
+}
+
+.pag.on{
+    background: #226ED8;
+}
+.swiper .prev-btn {
+    display: none;
+    width: 30px;
+    height: 30px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+    color: #226ED8;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.swiper .next-btn {
+    display: none;
+    width: 30px;
+    height: 30px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+    color: #226ED8;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#mobile-prev-btn {
+    display: none;
+}
+#mobile-next-btn {
+    display: none;
+}
+
 .kanban {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     overflow-y: auto;
     padding-bottom: 5px;
 }
@@ -241,6 +295,7 @@ main {
 }
 
 #add-task-btn {
+    margin-right: 1px;
     width: 30px;
     height: 30px;
     display: flex;
@@ -433,6 +488,8 @@ li .status {
     width: 20px;
 }
 
+
+
 /* FOOTER */
 
 footer {
@@ -502,9 +559,8 @@ footer .amor {
 }
 
 .modal .container {
-    padding: 30px 50px 40px 50px;
+    padding: 30px 50px;
     width: 474px;
-    height: 421px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -517,8 +573,6 @@ footer .amor {
 .modal h2 {
     width: 106px;
     color: #3867D6;
-    font-family: 'Poppins';
-    font-style: normal;
     font-weight: 600;
     font-size: 20px;
     line-height: 30px;
@@ -526,6 +580,7 @@ footer .amor {
 }
 
 .modal hr {
+    margin-bottom: 30px;
     padding: 3px;
     width: 121px;
     background: #3867D6;
@@ -539,8 +594,6 @@ form {
 
 .modal p {
     margin-bottom: 6px;
-    font-family: 'Poppins';
-    font-style: normal;
     font-weight: 600;
     font-size: 12px;
     line-height: 18px;
@@ -572,8 +625,6 @@ textarea {
     border-radius: 20px;
     color: #FFFFFF;
     border: none;
-    font-family: 'Poppins';
-    font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
@@ -584,7 +635,7 @@ textarea {
     position: absolute;
     top: 0px;
     right: 0px;
-    margin: 10px;
+    margin: 20px;
     width: 30px;
     height: 30px;
     display: flex;
@@ -605,4 +656,9 @@ textarea {
     font-size: 14px;
     line-height: 14px;
 }
+
+/* SWIPER */
+
+
+
 

@@ -58,16 +58,20 @@
     color: #FFFFFF;
 }
 
+.dark .pag {
+    background: #515151;
+}
+
+.dark .pag.on {
+    background: #226ED8;
+}
+
 .dark #add-task-btn {
     border: 2px solid #3867D6;
 }
 
 .dark #add-task-btn i {
     color: #3867D6;
-}
-
-.dark .kanban::-webkit-scrollbar-thumb {
-    background: #515151;
 }
 
 .dark ul {
