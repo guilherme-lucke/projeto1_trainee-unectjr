@@ -1,31 +1,4 @@
-const content = document.querySelector(".kanban");
-const scrollPrevBtn = document.getElementById("swiper-prev-btn");
-const scrollNextBtn = document.getElementById("swiper-next-btn");
-const scrollSpeed = 10; 
-let scrollInterval;
-
-scrollPrevBtn.addEventListener("mousedown", function () {
-    scrollInterval = setInterval(function () {
-        content.scrollLeft -= scrollSpeed;
-    }, 10);
-});
-
-scrollNextBtn.addEventListener("mousedown", function () {
-    scrollInterval = setInterval(function () {
-        content.scrollLeft += scrollSpeed;
-    }, 10);
-});
-
-scrollPrevBtn.addEventListener("mouseup", stopScroll);
-scrollPrevBtn.addEventListener("mouseleave", stopScroll);
-scrollNextBtn.addEventListener("mouseup", stopScroll);
-scrollNextBtn.addEventListener("mouseleave", stopScroll);
-
-function stopScroll() {
-    clearInterval(scrollInterval);
-}
-
-// MOBILE
+const content = document.querySelector('.kanban');
 const elemento = document.querySelector('ul');
 const mobilePrevBtn = document.getElementById("mobile-prev-btn");
 const mobileNextBtn = document.getElementById("mobile-next-btn");
@@ -48,15 +21,16 @@ pag1.classList.add('on');
 
 content.addEventListener("scroll", () => {
     const posicao = content.scrollLeft;
+    const largura = elemento.clientWidth;
     if (posicao < 1) {
         pag1.classList.add('on');
         pag2.classList.remove('on'); 
         pag3.classList.remove('on');
-    } else if (posicao > 1 & posicao < 287) {
+    } else if (posicao > largura-2 && posicao < largura*2) {
         pag1.classList.remove('on'); 
         pag2.classList.add('on');
         pag3.classList.remove('on');
-    } else {
+    } else if (posicao >= largura*2) {
         pag1.classList.remove('on'); 
         pag2.classList.remove('on');
         pag3.classList.add('on');

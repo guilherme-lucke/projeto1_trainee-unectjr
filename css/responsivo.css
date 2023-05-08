@@ -1,27 +1,5 @@
 
 @media (max-width: 970px) {
-
-    .swiper .swiper-wrapper {
-        display: flex;
-        align-items: center;
-    }
-
-    #swiper-prev-btn {
-        display: block;
-    }
-
-    #swiper-next-btn {
-        display: block;
-    }
-
-    .kaban {
-        justify-content: none;
-    }
-
-    .kanban::-webkit-scrollbar-thumb {
-        background: none;
-    }
-
     .e-swiper {
         margin: 0 5px;
     }
@@ -121,6 +99,11 @@
         align-items: center;
     }
 
+    .swiper .swiper-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
     .swiper-pagination {
         display: flex;
     }
@@ -131,10 +114,18 @@
 
     .kanban {
         max-width: 287px;
-        padding-bottom: 0;
         margin-bottom: 14px;
+        justify-content: none;
     }
-    
+
+    .kanban::-webkit-scrollbar-thumb {
+        background: none;
+    }
+
+    .dark .kanban::-webkit-scrollbar-thumb {
+        background: none;
+    }
+
     .e-swiper {
         margin: 0;
     }
@@ -154,7 +145,6 @@
         display: block;
     }
 }
-
 
 @media (max-width: 350px) {
     .kanban {

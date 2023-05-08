@@ -58,6 +58,10 @@
     color: #FFFFFF;
 }
 
+.dark .kanban::-webkit-scrollbar-thumb {
+    background: #515151;
+}
+
 .dark .pag {
     background: #515151;
 }
