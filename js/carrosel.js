@@ -26,11 +26,11 @@ content.addEventListener("scroll", () => {
         pag1.classList.add('on');
         pag2.classList.remove('on'); 
         pag3.classList.remove('on');
-    } else if (posicao > largura-2 && posicao < largura*2) {
+    } else if (posicao > largura-2 && posicao < (largura*2)-2) {
         pag1.classList.remove('on'); 
         pag2.classList.add('on');
         pag3.classList.remove('on');
-    } else if (posicao >= largura*2) {
+    } else if (posicao >= (largura * 2) - 2) {
         pag1.classList.remove('on'); 
         pag2.classList.remove('on');
         pag3.classList.add('on');
