@@ -191,8 +191,7 @@ main {
 }
 
 .frase .text {
-    display: flex;
-    flex-direction: column;
+    max-width: 532px;
 }
 
 .frase h6 {
@@ -382,10 +381,10 @@ li h3 {
     cursor: pointer;
 }
 
-#description input[type="checkbox"] {
-    display: none;
+#description-btn {
+    background: none;
+    border: none;
 }
-
 
 #visible-btn {
     display: flex;

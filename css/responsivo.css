@@ -149,10 +149,17 @@
 
 @media (max-width: 350px) {
     .kanban {
-        max-width: 272px;
+        max-width: 260px;
+    }
+    .kanban .container {
+        padding-left: 3px;
     }
     ul {
-        width: 260px;
+        width: 251px;
+    }
+
+    .card .container {
+        width: 285px;
     }
 
 }

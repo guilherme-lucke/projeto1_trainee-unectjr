@@ -33,8 +33,7 @@ form.addEventListener('submit', (event) => {
       <div>
             <div id="description">
 		        <div class="description-btn">
-	                <input type="checkbox" id="description-btn" />
-	                <label for="description-btn">
+	                <button id="description-btn" />
 	                    <span id="visible-btn">
 	                        <p>Ler descrição</p>
 	                        <i class="material-icons">expand_more</i>
@@ -43,7 +42,7 @@ form.addEventListener('submit', (event) => {
 	                        <p>Esconder descrição</p>
 	                        <i class="material-icons">expand_less</i>
 	                    </span>
-	                </label>
+                    </button>
 		        </div>
                 <p class="hidden">${taskDescriptionText}</p>
             </div>
@@ -62,15 +61,15 @@ form.addEventListener('submit', (event) => {
         taskDescriptionTextarea.value = '';
 
         const showDescripiontBtn = taskItem.querySelector('.description-btn');
-        const descriptionBtn = taskItem.querySelector('#description-btn');
-        const description = taskItem.querySelector('#description');
-        const descriptionText = taskItem.querySelector('#description p.hidden');
-
         if (taskDescriptionText === '') {
             showDescripiontBtn.style.display = 'none'
         }
 
-        descriptionBtn.addEventListener('change', () => {
+        const descriptionBtn = taskItem.querySelector('#description-btn');
+        const description = taskItem.querySelector('#description');
+        const descriptionText = taskItem.querySelector('#description p.hidden');
+
+        descriptionBtn.addEventListener('click', () => {
             description.classList.toggle('visible');
             descriptionText.style.display = description.classList.contains('visible') ? 'flex' : 'none';
         });
