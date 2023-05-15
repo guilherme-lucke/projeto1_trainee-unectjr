@@ -1,5 +1,5 @@
 const content = document.querySelector('.kanban');
-const elemento = document.querySelector('ul');
+const elemento = content.querySelector('.container');
 const mobilePrevBtn = document.getElementById("mobile-prev-btn");
 const mobileNextBtn = document.getElementById("mobile-next-btn");
 

@@ -116,6 +116,7 @@
         max-width: 287px;
         margin-bottom: 14px;
         justify-content: none;
+        overflow-x: hidden;
     }
 
     .kanban::-webkit-scrollbar-thumb {
@@ -148,7 +149,7 @@
 
 @media (max-width: 350px) {
     .kanban {
-        max-width: 260px;
+        max-width: 272px;
     }
     ul {
         width: 260px;

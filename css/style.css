@@ -263,7 +263,7 @@ main {
 .kanban {
     display: flex;
     justify-content: space-between;
-    overflow-y: auto;
+    overflow-x: auto;
     padding-bottom: 5px;
 }
 
@@ -295,7 +295,7 @@ main {
 }
 
 #add-task-btn {
-    margin-right: 1px;
+    margin-right: 2px;
     width: 30px;
     height: 30px;
     display: flex;
@@ -316,12 +316,22 @@ main {
     color: #226ED8;
 }
 
-ul {
-    width: 287px;
-    height: 337px;
+.kanban .container {
     background: #EEEEEE;
     border-radius: 10px;
-    overflow-x: auto;
+    padding-top: 14px;
+    padding-right: 6px;
+    padding-left: 6px;
+}
+
+ul {
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-bottom: 0;
+    padding-top: 0;
+    width: 275px;
+    height: 337px;
+    overflow-y: auto;
 }
 
 ul::-webkit-scrollbar {
@@ -340,8 +350,8 @@ ul::-webkit-scrollbar-thumb {
 
 li {
     padding: 12px;
+    margin-bottom: 14px;
     min-height: 61px;
-    margin: 14px;
     background: #FFFFFF;
     border-radius: 10px;
     position: relative;
