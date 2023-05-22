@@ -223,6 +223,7 @@ main {
     height: 12px;
     background: #C4C4C4;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .pag.on{

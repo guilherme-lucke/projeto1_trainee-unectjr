@@ -37,3 +37,16 @@ content.addEventListener("scroll", () => {
     }
 });
 
+pag1.addEventListener('click', () => {
+    content.scrollLeft = 0;
+});
+
+pag2.addEventListener('click', () => {
+    const largura = elemento.clientWidth;
+    content.scrollLeft = largura+1;
+});
+
+pag3.addEventListener('click', () => {
+    const largura = elemento.clientWidth;
+    content.scrollLeft = (largura+1) * 2;
+});
