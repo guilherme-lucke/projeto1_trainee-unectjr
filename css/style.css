@@ -20,6 +20,7 @@ body {
     font-size: 1.6rem;
 }
 
+
 /* HEADER */
 
 header {
@@ -101,6 +102,7 @@ i #moon {
     display: none;
     color: #222222;
 }
+
 
 /* MAIN */
 
@@ -396,14 +398,12 @@ li h3 {
     color: #002D6C;
 }
 
-
 #description span {
     align-items: center;
     cursor: pointer;
 }
 
 #description span p {
-    max-width: 118px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 300;
@@ -498,7 +498,6 @@ li .status {
 }
 
 
-
 /* FOOTER */
 
 footer {
@@ -546,6 +545,7 @@ footer .amor {
     line-height: 16px;
 }
 
+
 /* MODAL */
 
 .modal {
@@ -580,7 +580,6 @@ footer .amor {
 }
 
 .modal h2 {
-    width: 106px;
     color: #3867D6;
     font-weight: 600;
     font-size: 20px;
@@ -665,9 +664,3 @@ textarea {
     font-size: 14px;
     line-height: 14px;
 }
-
-/* SWIPER */
-
-
-
-

@@ -162,4 +162,15 @@
         width: 285px;
     }
 
+    /* MODAL */
+
+    .modal .container {
+        padding: 30px;
+        width: 285px;
+    }
+
+    #new-task-btn {
+        margin-top: 0px;    
+    }
+
 }
